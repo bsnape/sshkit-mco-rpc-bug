@@ -14,7 +14,7 @@
 
 ## Verification
 
-1. Running `mco_package_success.rb` works:
+Running `mco_package_success.rb` works:
 
 ```
 $ ruby mco_package_success.rb
@@ -22,7 +22,7 @@ INFO [c6866441] Running /usr/bin/env mco service status httpd as vagrant@192.168
 INFO [c6866441] Finished in 0.347 seconds with exit status 0 (successful).
 ```
 
-2. Running `mco_rpc_failure.rb` hangs:
+Running `mco_rpc_failure.rb` hangs:
 
 ```
 $ ruby mco_rpc_failure.rb
