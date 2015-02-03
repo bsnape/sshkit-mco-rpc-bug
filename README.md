@@ -1,6 +1,6 @@
 # sshkit-mco-rpc-bug
 
-## Usage
+## Setup
 
 1. Clone this repo.
 
@@ -12,9 +12,22 @@
 
 5. Bring up the `middleware` VM and `node0` VM by running `vagrant up`.
 
-6. Running `mco_package_success.rb` should work: `$ ruby mco_package_success.rb`
+## Verification
 
-7. Running `mco_rpc_failure.rb` should hang: `$ ruby mco_rpc_failure.rb`
+1. Running `mco_package_success.rb` works:
+
+```
+$ ruby mco_package_success.rb
+INFO [c6866441] Running /usr/bin/env mco service status httpd as vagrant@192.168.2.10
+INFO [c6866441] Finished in 0.347 seconds with exit status 0 (successful).
+```
+
+2. Running `mco_rpc_failure.rb` hangs:
+
+```
+$ ruby mco_rpc_failure.rb
+INFO [4d49499d] Running /usr/bin/env mco rpc service status service=httpd --json as vagrant@192.168.2.10
+````
 
 ## Testing manually
 
