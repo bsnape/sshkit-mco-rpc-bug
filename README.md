@@ -6,31 +6,15 @@
 
 2. Install the sshkit gem by doing a `bundle install`.
 
-3. Clone the example Vagrant MCO repo:
+3. Clone the example Vagrant MCO repo: `git clone git@github.com:ripienaar/mcollective-vagrant.git`
 
-```
-git clone git@github.com:ripienaar/mcollective-vagrant.git
-```
-
-4. Set the number of instances to 1 on line 6 of the `Vagrantfile`:
-
-```
-INSTANCES=1
-```
+4. Set the number of instances to 1 on line 6 of the `Vagrantfile`: `INSTANCES=1`
 
 5. Bring up the `middleware` VM and `node0` VM by running `vagrant up`.
 
-6. Running `mco_package_success.rb` should work:
+6. Running `mco_package_success.rb` should work: `$ ruby mco_package_success.rb`
 
-```
-$ ruby mco_package_success.rb
-```
-
-7. Running `mco_rpc_failure.rb` should hang:
-
-```
-$ ruby mco_rpc_failure.rb
-```
+7. Running `mco_rpc_failure.rb` should hang: `$ ruby mco_rpc_failure.rb`
 
 ## Testing manually
 
