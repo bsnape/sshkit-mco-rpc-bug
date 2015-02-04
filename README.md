@@ -6,9 +6,13 @@ For some reason, MCollective RPC commands only work with Capistrano 2.
 
 Here's a breakdown of the methods attempted:
 
-1. Capistrano 2 - RPC works.
-2. SSHKit (powers Capistrano 3) - RPC does not work.
-3. Custom Ruby SSH implementation (using `net/ssh`) - RPC does not work.
+1. **Capistrano 2** - RPC works.
+2. **SSHKit** (powers Capistrano 3) - RPC does not work.
+3. **Custom Ruby SSH implementation** (using `net/ssh`) - RPC does not work.
+
+In this repo I run two `mco` commands that report the health of `httpd`.
+One command uses the `mco` `rpc` agent, one uses the `service` agent.
+The `rpc` agent is the one we're having trouble with.
 
 ## Setup
 
