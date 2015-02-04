@@ -11,7 +11,20 @@ Here's a breakdown of the methods attempted:
 3. **Custom Ruby SSH implementation** (using `net/ssh`) - RPC does not work.
 
 In this repo I run two `mco` commands that report the health of `httpd`.
-One command uses the `mco` `rpc` agent, one uses the `service` agent.
+One command uses the `mco` `rpc` agent, one uses the `service` agent:
+
+`service` agent:
+
+```
+$ mco service status httpd
+```
+
+`rpc` agent:
+
+```
+$ mco rpc service status service=httpd --json
+```
+
 The `rpc` agent is the one we're having trouble with.
 
 ## Setup
